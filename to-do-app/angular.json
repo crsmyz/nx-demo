@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "button": "libs/button",
+    "header": "libs/header",
+    "to-do-app": "apps/to-do-app",
+    "to-do-app-e2e": "apps/to-do-app-e2e"
+  }
+}

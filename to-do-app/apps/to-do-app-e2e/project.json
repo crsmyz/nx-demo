@@ -1,0 +1,28 @@
+{
+  "root": "apps/to-do-app-e2e",
+  "sourceRoot": "apps/to-do-app-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/to-do-app-e2e/cypress.json",
+        "devServerTarget": "to-do-app:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "to-do-app:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/to-do-app-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["to-do-app"]
+}

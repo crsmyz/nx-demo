@@ -1,0 +1,9 @@
+<header>TO DO APP</header>
+<div>
+  <ul *ngFor="let todo of list">
+    <li><button (click)="removeItem(todo)">X</button> {{todo}}</li>
+  </ul>
+
+  <input #input type="text" />
+  <button (click)=" addTaskToList(input.value)">Add Task</button>
+</div>

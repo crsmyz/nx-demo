@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/button",
+  "sourceRoot": "libs/button/src",
+  "prefix": "to-do-app",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/button"],
+      "options": {
+        "jestConfig": "libs/button/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/button/src/**/*.ts",
+          "libs/button/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
